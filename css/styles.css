@@ -8,22 +8,76 @@ html {
 
 
 
-.project-btn {
-    background-image: url("../images/dropdown_hover.svg"); 
-    background-size: cover; /* Adjust the background image size to cover the entire button */ 
+/* all project displays */
+.exhibit-booth, .tote-bags, .company-presentation, .leaflet {
+    background-size: cover;
     background-repeat: no-repeat; /* Prevent the background image from repeating */ 
+    background-position: 50% 50%;
+    color: white; /* text color of the button */ 
+    border: none; /* remove the button border */ 
+}
+
+.exhibit-booth {
+    background-image: url("../images/projects_displays/Exhibit%20Booth_bw.jpg"); 
+}
+.exhibit-booth:hover {
+    background-image: url("../images/projects_displays/Exhibit%20Booth_colored.jpg");
     color: transparent; /* Set the text color of the button */ 
-    border: none; /* Remove the button border */ 
-    font-size: 19px; /* Set the font size of the text */
 }
-.project-btn:hover {
-    background-image: url("../images/favicon.png"); 
-    background-size: cover; /* Adjust the background image size to cover the entire button */ 
-    background-repeat: no-repeat; /* Prevent the background image from repeating */ 
-    color: black; /* Set the text color of the button */ 
-    border: none; /* Remove the button border */ 
-    font-size: 19px; /* Set the font size of the text */
+
+.tote-bags {
+    background-image: url("../images/projects_displays/Tote%20Bags_bw.jpg"); 
 }
+.tote-bags:hover {
+    background-image: url("../images/projects_displays/Tote%20Bags_colored.jpg"); 
+    color: transparent; /* Set the text color of the button */ 
+}
+
+.company-presentation {
+    background-image: url("../images/projects_displays/Presentation_bw.jpg"); 
+}
+.company-presentation:hover {
+    background-image: url("../images/projects_displays/Presentation_colored.jpg"); 
+    color: transparent; /* Set the text color of the button */ 
+}
+
+.leaflet {
+    background-image: url("../images/projects_displays/Leaflet_bw.jpg"); 
+}
+.leaflet:hover {
+    background-image: url("../images/projects_displays/Leaflet_colored.jpg"); 
+}
+
+
+
+
+
+
+
+
+
+
+
+/* graphic design section */
+.graphic-design {
+    background: #cbcbcb;
+    background-image: url('../images/projects_displays/gd_bw.png'); 
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    height: 100%;
+    /*margin-top: -9rem; */
+    /*padding-top: 14rem; */
+    align-content: center; 
+}
+
+.graphic-design:hover {
+    background: #f8c582;
+    background-image: url('../images/projects_displays/gd_colored.png'); 
+    background-repeat: no-repeat;
+    background-position: 75% 50%; 
+}
+
+
 
 
 .portfolio {
@@ -32,7 +86,6 @@ html {
     /*grid-template-columns: auto  auto auto; */
     grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
     grid-auto-rows: minmax(500px, auto); /* Default row height with minimum 100px, adjusts based on content */
-    
     padding: 12px;
 }
 
@@ -1125,7 +1178,7 @@ h2 {
 h1 {
     font: 2.2rem/2.8rem "indivisible", sans-serif;
     font-weight: 900;
-    text-align: left;  
+    text-align: center;  
 }
 
 /* about section */    

@@ -9,8 +9,19 @@ html {
 
 
 
+
+
+/* portfolio grid */
+.portfolio {
+    display: grid;
+    margin-bottom: -3.8rem;
+    grid-template-columns: 1fr  1fr 1fr;
+}
+
+
 /* all project displays */
 .exhibit-booth, .tote-bags, .company-presentation, .leaflet, .notebook, .ig-post-series, .print-posters, .creative-photography, .ux {
+    aspect-ratio: 1; /* not to distort squares with screen size */
     background-size: cover;
     background-repeat: no-repeat; /* Prevent the background image from repeating */ 
     background-position: 50% 50%;
@@ -94,6 +105,16 @@ html {
 
 
 
+/* about section bottom wave */
+.about-bottom-wave {
+    position: absolute; /* to place it on top */
+    stroke: black;
+    stroke-dasharray: 2070,10000,20,200;
+    stroke-width: 0.7rem;
+    background-color: transparent;
+    width: 100%;
+}
+
 
 
 
@@ -154,17 +175,6 @@ html {
 
 }
 
-
-.portfolio {
-    display: grid;
-    margin-top: -3rem; 
-    margin-bottom: -5rem;
-    /*grid-template-columns: auto  auto auto; */
-    grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
-    grid-auto-rows: minmax(500px, auto); /* Default row height with minimum 100px, adjusts based on content */
-    z-index: 999;
-
-}
 
 
 
@@ -230,34 +240,14 @@ h1-footer {
     letter-spacing: 0px; 
 }
 
-/* title of project card */
-h2 {
-    text-align: left;
-	color: #333;
-	font: 1.375rem/1.75rem "indivisible", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-	letter-spacing: -0.1px;
-}
-
 /* about section top wave */
 .about-top-wave {
-    z-index: 999;
+    z-index: 999; /* to place it on top of title */
     height: 5rem;
     width: 100%;
     position: relative;
 }
 
-/* about section bottom wave */
-.about-bottom-wave {
-    z-index: 1;
-    stroke: black;
-    stroke-dasharray: 2070,10000,20,200;
-    stroke-width: 0.7rem;
-    background-color: transparent;
-    height: 11rem;
-    width: 100%;
-}
 
 /* top and bottom waves path class so that its color changes with bg color of about section */
 .cls-1, .cls-3 {
@@ -604,56 +594,9 @@ h2 {
     background-color: black;
 }
 
-/* entire space with project cards */
-.projects {
-    width: 100%;
-    position: relative;
-    z-index: 998;
-    background-color: white;
-	text-align: left;
-    padding-top: 5%;
-	padding-bottom: 8%;
-}
 
-/* project card left */
-.card-left {
-    transition: all 0.2s;
-    vertical-align: top;
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-right: 2rem;
-    display: inline-block;
-    width: 48%;
-    height: auto;
-    border-radius: 0.8rem;
-    border: none;
-    background: #F5F5F5;
-}
-.card-left:hover {
-    background: #E9E9E9;
-}
 
-/* project card right */
-.card {
-    transition: all 0.2s;
-    vertical-align: top;
-    text-align: center;
-    margin-bottom: 2rem;
-    display: inline-block;
-    width: 48%;
-    height: auto;
-    border-radius: 0.8rem;
-    border: none;
-    background: #F5F5F5;}
-.card:hover {
-    background: #E9E9E9;
-}
 
-/* project card content */
-.card-body {
-    padding: 1.2rem;
-    text-align: left;
-}
 
 /* project card image and display image that is not zooming in */
 .card-image, .card-image-display {
@@ -680,13 +623,6 @@ h2 {
 .card-image-display:not(:hover) {
     transition: all 0.2s ease;
 } 
-
-/* project card title */
-.card-title {
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
 
 /* project card description */
 .card-description {
@@ -1049,9 +985,9 @@ h1-footer {
 	color: white;
 }
     
-/* about anf footer section */
+/* about and footer section */
 .about, .footer {
-    padding-bottom: 8rem;
+    padding-bottom: 11rem; /* to compensate top wave space */
 	padding-top: 8rem;        
 }
      
@@ -1158,18 +1094,6 @@ h2 {
 	font: 1.375rem/1.75rem "indivisible", sans-serif;
     font-weight: 600;
 }
-      
-/* project card content */
-.card-body {
-    padding: 1.2rem;
-    text-align: left;
-}
-     
-/* project card title */
-.card-title {
-    margin-top: 2rem;
-    text-align: left;
-}
     
 /* other headers */
 .header-general {
@@ -1261,7 +1185,7 @@ h1 {
 
 /* about section */    
 .about {
-    text-align: left;
+    text-align: center;
 }
 
 /* about bottom wave */
@@ -1282,7 +1206,7 @@ h1 {
   
 /* footer section */
 .footer {
-	text-align: left;
+	text-align: center;
 }
  
 /* title of footer section */
@@ -1292,12 +1216,12 @@ h1-footer {
    
 /* body text in footer section */
 .body-text-footer {
-    text-align: left;
+    text-align: center;
 }
  
 /* social block */
 .footer .icon-container {
-	text-align: left;
+	text-align: center;
 }  
 }
 
@@ -1352,13 +1276,13 @@ h1-footer {
      
 /* footer black wave */	
 .footer-frame {
-    height: 5rem;
+    height: 3rem;
 }
  
 /* about section bottom wave */
 .about-bottom-wave {
-    height: 9rem;
-    stroke-width: 0.7rem;
+    height: 4rem;
+    stroke-width: 1.5rem;
 }
  
 /* project card image and display image that is not zooming in */

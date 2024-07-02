@@ -8,8 +8,9 @@ html {
 
 
 
+
 /* all project displays */
-.exhibit-booth, .tote-bags, .company-presentation, .leaflet {
+.exhibit-booth, .tote-bags, .company-presentation, .leaflet, .notebook, .ig-post-series, .print-posters, .creative-photography, .ux {
     background-size: cover;
     background-repeat: no-repeat; /* Prevent the background image from repeating */ 
     background-position: 50% 50%;
@@ -22,7 +23,7 @@ html {
 }
 .exhibit-booth:hover {
     background-image: url("../images/projects_displays/Exhibit%20Booth_colored.jpg");
-    color: transparent; /* Set the text color of the button */ 
+    color: transparent;
 }
 
 .tote-bags {
@@ -30,7 +31,7 @@ html {
 }
 .tote-bags:hover {
     background-image: url("../images/projects_displays/Tote%20Bags_colored.jpg"); 
-    color: transparent; /* Set the text color of the button */ 
+    color: transparent;
 }
 
 .company-presentation {
@@ -38,7 +39,7 @@ html {
 }
 .company-presentation:hover {
     background-image: url("../images/projects_displays/Presentation_colored.jpg"); 
-    color: transparent; /* Set the text color of the button */ 
+    color: transparent;
 }
 
 .leaflet {
@@ -46,6 +47,49 @@ html {
 }
 .leaflet:hover {
     background-image: url("../images/projects_displays/Leaflet_colored.jpg"); 
+    color: transparent;
+}
+
+.notebook {
+    background-image: url("../images/projects_displays/Notebook_bw.jpg"); 
+}
+.notebook:hover {
+    background-image: url("../images/projects_displays/Notebook_colored.jpg"); 
+    color: transparent; 
+}
+
+.ig-post-series {
+    background-image: url("../images/projects_displays/IG%20Post%20Series_bw.jpg"); 
+}
+.ig-post-series:hover {
+    background-image: url("../images/projects_displays/IG%20Post%20Series_colored.jpg"); 
+    color: transparent; 
+}
+
+.print-posters {
+    background-image: url("../images/projects_displays/Print%20Poster_bw.jpg"); 
+}
+.print-posters:hover {
+    background-image: url("../images/projects_displays/Print%20Poster_colored.jpg"); 
+    color: transparent; 
+}
+
+.creative-photography {
+    background-image: url("../images/projects_displays/Creative%20Photography_bw.jpg"); 
+}
+
+.creative-photography:hover {
+    background-image: url("../images/projects_displays/Creative%20Photography_colored.jpg"); 
+    color: transparent; 
+}
+
+.ux {
+    background-image: url("../images/projects_displays/UX_UI_bw.jpg"); 
+}
+
+.ux:hover {
+    background-image: url("../images/projects_displays/UX_UI_colored.jpg"); 
+    color: transparent; 
 }
 
 
@@ -53,12 +97,7 @@ html {
 
 
 
-
-
-
-
-
-/* graphic design section */
+/* graphic design section 
 .graphic-design {
     background: #cbcbcb;
     background-image: url('../images/projects_displays/gd_bw.png'); 
@@ -67,26 +106,28 @@ html {
     height: 100%;
     /*margin-top: -9rem; */
     /*padding-top: 14rem; */
-    align-content: center; 
-}
+   /* align-content: center; 
+} */
 
-.graphic-design:hover {
+/* .graphic-design:hover {
     background: #f8c582;
     background-image: url('../images/projects_displays/gd_colored.png'); 
     background-repeat: no-repeat;
     background-position: 75% 50%; 
-}
+} */
 
 
 
 
 .portfolio {
     display: grid;
-    background-color: aqua;
+    margin-top: -3rem; 
+    margin-bottom: -5rem;
     /*grid-template-columns: auto  auto auto; */
     grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
     grid-auto-rows: minmax(500px, auto); /* Default row height with minimum 100px, adjusts based on content */
-    padding: 12px;
+    z-index: 999;
+
 }
 
 
@@ -173,6 +214,7 @@ h2 {
 
 /* about section bottom wave */
 .about-bottom-wave {
+    z-index: 1;
     stroke: black;
     stroke-dasharray: 2070,10000,20,200;
     stroke-width: 0.7rem;
@@ -641,7 +683,6 @@ h2 {
 
 /* footer black wave */	
 .footer-frame {
-    height: 5rem;
     width: 100%;
 }
 

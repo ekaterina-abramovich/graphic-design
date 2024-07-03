@@ -1,13 +1,4 @@
-/* project description in header */
-.description {
-    font: 1rem/1.5rem "indivisible", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-    color: white;
-    padding-top: 4%;
-    padding-bottom: 4%;
 
-}
 
 /* bordered button in the header RESUME */
 .btn-outline-ux {
@@ -285,9 +276,7 @@
 
 /* case name */
 .case_name {
-    color: rgba(0.1, 0, 0, 0);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+    color: white;
 	font: 9.5rem/7.5rem "indivisible";
     font-weight: 900;
     font-style: normal;
@@ -670,7 +659,7 @@ h1-footer {
     padding-top: 2rem;
 }
     
-
+ 
     
 /* case name alignment settings */
 .ux_header .text-container {
@@ -702,7 +691,7 @@ h1-footer {
 /* whole header background settings */
 .ux_header {
     background-image: url('../images/product_design_directory/bridge/bridge_background.png'); 
-    height: 700px;
+    height: 830px;
 
 }
     

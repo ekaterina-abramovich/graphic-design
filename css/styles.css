@@ -4,16 +4,40 @@ html {
 	height: 100%;
 }
 
-
-/* project description in header */
-.description {
-    font: 1.2rem/1.5rem "indivisible", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-    color: white;
-    padding-top: 4%;
-    padding-bottom: 4%;
+.project-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 650px;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    margin-bottom: -4rem;
 }
+
+/* page section/block */
+.section {
+    padding-top: 7%;
+    align-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+/* content of the page section */
+.double-grid {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: auto  auto;
+    grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
+    grid-auto-rows: minmax(100px, auto); /* Default row height with minimum 100px, adjusts based on content */
+}
+
+/* content of the grid */
+.block {
+    padding-bottom: 15%;
+    align-content: top;
+}
+
 
 
 
@@ -167,29 +191,6 @@ html {
 } */
 
 
-.block {
-    background-color: aqua;
-    padding-bottom: 8%;
-    align-content: center;
-}
-
-.single-grid {
-    display: grid;
-    align-content: center;
-    text-align: center;
-    height: 100%;
-
-}
-
-.double-grid {
-    display: grid;
-    grid-gap: 5%;
-    grid-template-columns: auto  auto;
-    grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
-    grid-auto-rows: minmax(100px, auto); /* Default row height with minimum 100px, adjusts based on content */
-    background-color: lightgray;
-
-}
 
 
 
@@ -222,6 +223,15 @@ html {
     color: white;
     padding-top: 3rem;
     padding-bottom: 2rem;
+}
+
+.project-name {
+    color: white;
+	font: 9rem/13rem "indivisible";
+    font-weight: 900;
+    font-style: normal;
+	letter-spacing: -4px;
+    position: relative;
 }
 
 /* page title header */
@@ -736,6 +746,10 @@ a:hover.back-to-top {
 
 @media (min-width: 68px) {
     
+.portfolio {
+    grid-template-columns: 1fr 1fr;
+}
+    
 /* project card image that IS zooming in to block zoom on mobile */
 .card-image:hover {
     background-size: 100% auto;
@@ -793,6 +807,7 @@ h2 {
     text-align: center;
     padding-top: 11rem;
 } 
+
     
     
     
@@ -925,7 +940,7 @@ h2 {
 h1 {
     font: 1.5rem/2rem "indivisible", sans-serif;
     font-weight: 900;
-    padding-bottom: 4%;
+    padding-bottom: 7%;
 }
   
 /* about section */
@@ -963,10 +978,8 @@ h1-footer {
 /********************************************/
     
 @media (min-width: 768px) {
-    
-.portfolio {
-                grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-            }
+
+
     
 /* left project card */
 .card-left {
@@ -1061,7 +1074,7 @@ h1 {
   
 /* about bottom wave */
 .about-bottom-wave {
-    height: 6rem;
+    height: 3rem;
     stroke-width: 1.2rem;
 }
     
@@ -1093,6 +1106,10 @@ h1-footer {
 /********************************************/
 
 @media (min-width: 992px) {
+    
+.portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 /* project card image that IS zooming in */
 .card-image:hover {
@@ -1206,7 +1223,7 @@ h1 {
 
 /* about bottom wave */
 .about-bottom-wave {
-    height: 8rem;
+    height: 4rem;
     stroke-width: 1rem;
 }
  

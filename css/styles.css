@@ -1,47 +1,309 @@
+/*************************************/
+/*       GENERAL STYLES FOR ALL      */
+/*************************************/
+
+/* entire html page */
 html {
     background: white;
     width: 100%;
 	height: 100%;
 }
 
-.project-header {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 650px;
+/* 3 purple dots while loading */
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%; /* centers the loading animation vertically one the screen */
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #7864F6;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	} 40% { 
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+/* header menu */
+.navbar-custom {
+    z-index: 999;
+	background-color: transparent;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    font: 0.875rem/0 "indivisible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.2s;
+    position: absolute;
+    width: 100%;
+}
+
+/* header content */
+.navbar-custom .container {
+	max-width: 100%;
+}
+
+/* signature */
+.navbar-custom .navbar-brand.logo-image img {
+    width: 160px;
+	height: auto;
+}
+
+/* actual menu */
+.navbar-custom .navbar-nav {
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+/* sections + mobile dropdown menu humburger */
+.navbar-custom .nav-item .nav-link {
+	padding: 1.125rem 1.5rem 1.125rem 1.8rem;
+    text-align: left;
+    width: auto;
+    color: #f7f5f5;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+.navbar-custom .nav-item .nav-link:hover {
+  	color: #69d27c;
+}
+.navbar-custom .nav-item .nav-link:active {
+	color: white;
+}
+
+/* mobile dropdown menu humburger */
+.navbar-custom .navbar-toggler {
+	padding: 0;
+	border: none;
+	color: white;
+	font-size: 2rem;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
+	display: inline-block;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
+	display: none;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
+	display: inline-block;
+	margin-right: 0.125rem;
+}
+
+/* block with actual content */
+.sub-block {
+    align-content: center;
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+/* page sections */
+.about, .footer, .section {
+    padding-bottom: 8%;
+	padding-top: 8%;   
+    text-align: center;
+}
+
+/* body texts */
+.body-text,  .body-text-footer {
+    font: 1rem/1.5rem "indivisible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* main body text */
+.body-text {
+    color: black;
+}
+
+/* body text in footer */
+.body-text-footer {
+    color: white;
+}
+
+/* title of footer */
+h1-footer {
+	color: white;
+    font: 2.2rem/2.8rem "indivisible", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 0px; 
+}
+
+/* footer section */
+.footer {
     position: relative;
-    align-content: center;
-    text-align: center;
-    margin-bottom: -4rem;
+    z-index: 998;
+    background-color: black;
 }
 
-/* page section/block */
-.section {
-    padding-top: 7%;
-    align-content: center;
-    text-align: center;
-    background-color: white;
+/* footer black wave */	
+.footer-frame {
+    width: 100%;
 }
 
-/* content of the page section */
-.double-grid {
-    display: grid;
-    grid-gap: 5%;
-    grid-template-columns: auto  auto;
-    grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
-    grid-auto-rows: minmax(100px, auto); /* Default row height with minimum 100px, adjusts based on content */
+/* social block */
+.footer .icon-container {
+	text-align: left;
 }
 
-/* content of the grid */
-.block {
-    padding-bottom: 15%;
-    align-content: top;
+/* social icons */
+.footer .fa-stack {
+	margin-right: 1rem;
+	font-size: 1.3rem;
 }
 
+/* social icons inside */
+.footer .fa-stack .fa-stack-1x {
+    color: black;
+	transition: all 0.2s ease;
+}
 
+/* social icon circles */
+.footer .fa-stack .fa-stack-2x {
+	color: #7864F6;
+	transition: all 0.2s ease;
+}
 
+/* social icons inside on hover */
+.footer .fa-stack:hover .fa-stack-1x {
+	color: black;
+}
 
+/* social icon circles on hover so their color is not interrupted */
+.footer .fa-stack:hover .fa-stack-2x {
+    color: white;
+}
 
+/* back-to-top purple button */
+a.back-to-top {
+	position: fixed;
+	z-index: 999;
+	right: 0.75rem;
+	bottom: 0.75rem;
+	display: none;
+	width: 2.625rem;
+	height: 2.625rem;
+	border-radius: 10.875rem;
+	background: #7864F6 url("../images/up-arrow-white.svg") no-repeat center 47%;
+	background-size: 1.125rem 1.125rem;
+	text-indent: -9999px;
+}
+
+a:hover.back-to-top {
+    background: #F2F2F2 url("../images/up-arrow-black.svg") no-repeat center 47%;
+    background-size: 1.125rem 1.125rem;
+}
+
+/******************************/
+/*          HOME PAGE         */
+/******************************/
+
+/* header background settings */
+.header {
+    height: 1000px;
+    background: radial-gradient(at top left, rgba(72,211,89) 0%, rgba(120,100,246,1) 75%);
+    background-size: 160% 160%; 
+    animation: gradient 4s ease infinite;
+}
+
+/* background gradient */
+@keyframes gradient {
+	0% {
+		background-position: 100% 100%;
+	}
+	50% {
+		background-position: 0% 48%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 100% 100%;
+	}
+	50% {
+		background-position: 0% 48%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
+}
+
+/* page title */
+.name {
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+	font: 17rem/13rem "indivisible";
+    font-weight: 900;
+    font-style: normal;
+	letter-spacing: -4px;
+    position: relative;
+    z-index: 1;
+}
+.name:hover {
+    color: white;
+}
+
+/* image of me */
+.image-container {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+}
 
 /* portfolio grid */
 .portfolio {
@@ -49,7 +311,6 @@ html {
     margin-bottom: -3.8rem;
     grid-template-columns: 1fr  1fr 1fr;
 }
-
 
 /* all project displays */
 .exhibit-booth, .tote-bags, .company-presentation, .leaflet, .notebook, .ig-post-series, .print-posters, .creative-photography, .ux {
@@ -135,68 +396,14 @@ html {
     color: transparent; 
 }
 
-
-
 /* about section bottom wave */
 .about-bottom-wave {
     position: absolute; /* to place it on top */
     stroke: black;
     stroke-dasharray: 2070,10000,20,200;
-    stroke-width: 0.7rem;
     background-color: transparent;
     width: 100%;
 }
-
-
-
-
-/* graphic design section 
-.graphic-design {
-    background: #cbcbcb;
-    background-image: url('../images/projects_displays/gd_bw.png'); 
-    background-repeat: no-repeat;
-    background-position: 75% 50%;
-    height: 100%;
-    /*margin-top: -9rem; */
-    /*padding-top: 14rem; */
-   /* align-content: center; 
-} */
-
-/* .graphic-design:hover {
-    background: #f8c582;
-    background-image: url('../images/projects_displays/gd_colored.png'); 
-    background-repeat: no-repeat;
-    background-position: 75% 50%; 
-} */
-
-
-/* .colors {
-    display: grid;
-    grid-template-columns: auto  auto auto auto;
-    height: 5rem;
-    vertical-align: center;
-}
-
-
-.color-block {
-    width: 100%;
-    background-color: green;
-    text-align: left;
-}
-
-.single-color {
-    display: inline-block;
-    width: 50%;
-    background-color: red;
-} */
-
-
-
-
-
-
-
-
 
 /* about section */
 .about {
@@ -204,66 +411,6 @@ html {
     z-index: 998;
     background-color: white;
     transition: all 0.2s; /* so that bg color change is smooth */
-}
-
-/* body text in about section and others */
-.body-text,  .body-text-footer {
-    font: 1rem/1.5rem "indivisible", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* body text */
-.body-text {
-    color: black;
-}
-
-/* body text in footer */
-.body-text-footer {
-    color: white;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-}
-
-.project-name {
-    color: white;
-	font: 9rem/13rem "indivisible";
-    font-weight: 900;
-    font-style: normal;
-	letter-spacing: -4px;
-    position: relative;
-}
-
-/* page title header */
-.name {
-    color: rgba(255, 255, 255, 0.1);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-	font: 17rem/13rem "indivisible";
-    font-weight: 900;
-    font-style: normal;
-	letter-spacing: -4px;
-    position: relative;
-    z-index: 1;
-}
-.name:hover {
-    color: white;
-}
-
-/* image of me alignment */
-.image-container {
-    z-index: 0;
-    width: 100%;
-    position: relative;
-}
-
-/* title of footer */
-h1-footer {
-	color: white;
-    font: 2.2rem/2.8rem "indivisible", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    letter-spacing: 0px; 
 }
 
 /* about section top wave */
@@ -274,16 +421,11 @@ h1-footer {
     position: relative;
 }
 
-
 /* top and bottom waves path class so that its color changes with bg color of about section */
 .cls-1, .cls-3 {
     fill: white;
     transition: all 0.2s;
 }
-
-/*******************************/
-/*       skills buttons        */
-/*******************************/
 
 /* styles for button shape */
 .btn-skills {
@@ -348,397 +490,108 @@ h1-footer {
     background-image: url("../images/skills_icons/indesign.svg");  
 }
 
-/*******************************/
-/* 3 purple dots while loading */
-/*******************************/
 
-.spinner-wrapper {
-	position: fixed;
-	z-index: 999999;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: #fff;
+/******************************/
+/*         PROJECT PAGE       */
+/******************************/
+
+/* header */
+.project-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 650px;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    margin-bottom: -4rem;
 }
 
-.spinner {
-	position: absolute;
-	top: 50%; /* centers the loading animation vertically one the screen */
-	left: 50%; /* centers the loading animation horizontally one the screen */
-	width: 3.75rem;
-	height: 1.25rem;
-	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
-	text-align: center;
-}
-
-.spinner > div {
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	border-radius: 100%;
-	background-color: #7864F6;
-	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-	0%, 80%, 100% { -webkit-transform: scale(0); }
-	40% { -webkit-transform: scale(1.0); }
-}
-
-@keyframes sk-bouncedelay {
-	0%, 80%, 100% { 
-		-webkit-transform: scale(0);
-		-ms-transform: scale(0);
-		transform: scale(0);
-	} 40% { 
-		-webkit-transform: scale(1.0);
-		-ms-transform: scale(1.0);
-		transform: scale(1.0);
-	}
-}
-
-/**************************/
-/*       header menu      */
-/**************************/
-
-/* header menu */
-.navbar-custom {
-    z-index: 999;
-	background-color: transparent;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: white;
-    font: 0.875rem/0 "indivisible", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    transition: all 0.2s;
-    position: absolute;
-    width: 100%;
-}
-
-/* header content */
-.navbar-custom .container {
-	max-width: 100%;
-}
-
-/* signature */
-.navbar-custom .navbar-brand.logo-image img {
-    width: 160px;
-	height: auto;
-}
-
-/* actual menu */
-.navbar-custom .navbar-nav {
-	margin-top: 0.75rem;
-	margin-bottom: 0.5rem;
-
-}
-
-/* sections + mobile dropdown menu humburger */
-.navbar-custom .nav-item .nav-link {
-	padding: 1.125rem 1.5rem 1.125rem 1.8rem;
-    text-align: left;
-    width: auto;
-    color: #f7f5f5;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-}
-.navbar-custom .nav-item .nav-link:hover {
-  	color: #69d27c;
-}
-.navbar-custom .nav-item .nav-link:active {
-	color: white;
-}
-
-/* sections + dropdown menu humburger to set PORTFOLIO dropdown */
-.navbar-custom .nav-item-mobile .nav-link {
-	padding: 1.125rem 1.5rem 1.125rem 1.8rem;
-    text-align: left;
-    width: auto;
-    color: #f7f5f5;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-}
-.navbar-custom .nav-item-mobile .nav-link:hover {
-  	color: #69d27c;
-}
-.navbar-custom .nav-item-mobile .nav-link:active {
-	color: white;
-}
-
-.navbar-custom .dropdown:hover > .dropdown-menu {
-	display: block; /* this makes the dropdown menu stay open while hovering it */
-	min-width: auto;
-	animation: fadeDropdown 0.2s; /* required for the fade animation */
-}
-
-@keyframes fadeDropdown {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.navbar-custom .dropdown-toggle:focus { /* removes dropdown outline on focus */
-	outline: 0;
-}
-
-.navbar-custom .dropdown-menu {
-	margin-top: 0;
-	border: none;
-	border-radius: 0.25rem;
-	background-color: #7864F6;
-}
-
-.navbar-custom .dropdown-item {
-	color: #f7f5f5;
-	opacity: 0.8;
-    font: 0.875rem/0 "indivisible", sans-serif;
+/* project title */
+.project-name {
+    color: white;
+	font: 9rem/13rem "indivisible";
     font-weight: 900;
     font-style: normal;
-    text-decoration: none;
-}
-.navbar-custom .dropdown-item:hover {
-	background-color: #7864F6;
-	color: #fff;
-	opacity: 1;
-}
-
-.navbar-custom .dropdown-items-divide-hr {
-	width: 100%;
-	height: 1px;
-	margin: 0.75rem auto 0.725rem auto;
-	border: none;
-	background-color: #c4d8dc;
-	opacity: 0.2;
-}
-
-.navbar-custom .nav-item .btn-outline-sm {
-	margin-top: 0.25rem;
-	margin-bottom: 1.375rem;
-	margin-left: 0.5rem;
-	border: 0.125rem solid #fff;
-	color: #fff;
-}
-
-.navbar-custom .nav-item .btn-outline-sm:hover {
-	background-color: #FFC700;
-	color: black;
-	border: 0.125rem solid black;
-}
-
-.navbar-custom .navbar-toggler {
-	padding: 0;
-	border: none;
-	color: white;
-	font-size: 2rem;
-}
-
-.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
-	display: none;
-}
-
-.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
-	display: inline-block;
-}
-
-.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
-	display: none;
-}
-
-.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
-	display: inline-block;
-	margin-right: 0.125rem;
-}
-/* end of menu */
-
-/**********/
-/* header */
-/**********/
-
-/* all headers background settings */
-.header, .header-general {
-    background: radial-gradient(at top left, rgba(72,211,89) 0%, rgba(120,100,246,1) 75%);
-    background-size: 160% 160%; 
-    animation: gradient 4s ease infinite;
-}
-
-/* homepage header only */
-.header {
-    height: 1000px;
-}
-
-/* other headers */
-.header-general {
-    height: 900px;
-}
-
-/* gradient background gradient */
-@keyframes gradient {
-	0% {
-		background-position: 100% 100%;
-	}
-	50% {
-		background-position: 0% 48%;
-	}
-	100% {
-		background-position: 100% 100%;
-	}
-}
-
-@-webkit-keyframes gradient {
-	0% {
-		background-position: 100% 100%;
-	}
-	50% {
-		background-position: 0% 48%;
-	}
-	100% {
-		background-position: 100% 100%;
-	}
-}
-
-/* footer section */
-.footer {
+	letter-spacing: -4px;
     position: relative;
-    z-index: 998;
-    background-color: black;
 }
 
-
-
-
-
-/* project card image and display image that is not zooming in */
-.card-image, .card-image-display {
-    width: 100%;
-    border-width: 3rem;
-    border: 0.2rem solid black;
-    border-radius: 0.6rem;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-    box-shadow: 0px 0px 10px #B7B7B7;
+/* content of the page section */
+.double-grid {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: auto  auto;
+    grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
+    grid-auto-rows: minmax(100px, auto); /* Default row height with minimum 100px, adjusts based on content */
 }
 
-.card-image:hover {
-    background-size: 200% auto;
+/* content of the grid */
+.block {
+    padding-bottom: 15%;
+    align-content: top;
 }
 
-/* display image on hover */
-.card-image-display:hover {
-    background-size: 110% auto;
-    transition: all 0.2s ease;
+/* page section */
+.section {
+    background-color: white;
 }
 
-.card-image-display:not(:hover) {
-    transition: all 0.2s ease;
-} 
-
-/* project card description */
-.card-description {
-    padding-bottom: 0.5rem;
-}
-
-/* button under title */
-.btn-card {
-    display: inline-block;
-    text-align: center;
-    width: 11rem;
-	padding: 1.2rem 1.5rem 1.2rem 1.5rem;
-	border: 0.125rem solid black;
-	border-radius: 2rem;
-	background-color: white;
-	color: black;
-    font: 0.775rem/0 "indivisible", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    text-decoration: none;
-	transition: all 0.2s;
-    box-shadow: 0px 0px 10px #B7B7B7;
-}
-.btn-card:hover {
-	background-color: black;
-	color: white;
-    box-shadow: 0px 0px 0px #B7B7B7;
-    text-decoration: none;
-}
-
-/* footer black wave */	
-.footer-frame {
-    width: 100%;
-}
-
-/* social block */
-.footer .icon-container {
-	text-align: left;
-}
-
-/* social icons */
-.footer .fa-stack {
-	margin-right: 1rem;
-	font-size: 1.3rem;
-}
-
-/* social icons inside */
-.footer .fa-stack .fa-stack-1x {
-    color: black;
-	transition: all 0.2s ease;
-}
-
-/* social icon circles */
-.footer .fa-stack .fa-stack-2x {
-	color: #7864F6;
-	transition: all 0.2s ease;
-}
-
-/* social icons inside on hover */
-.footer .fa-stack:hover .fa-stack-1x {
-	color: black;
-}
-
-/* social icon circles on hover so their color is not interrupted */
-.footer .fa-stack:hover .fa-stack-2x {
-    color: white;
-}
-
-/* back-to-top purple button */
-a.back-to-top {
-	position: fixed;
-	z-index: 999;
-	right: 0.75rem;
-	bottom: 0.75rem;
-	display: none;
-	width: 2.625rem;
-	height: 2.625rem;
-	border-radius: 10.875rem;
-	background: #7864F6 url("../images/up-arrow-white.svg") no-repeat center 47%;
-	background-size: 1.125rem 1.125rem;
-	text-indent: -9999px;
-}
-
-a:hover.back-to-top {
-    background: #F2F2F2 url("../images/up-arrow-black.svg") no-repeat center 47%;
-    background-size: 1.125rem 1.125rem;
-}
-
-/* MEDIA QUARIES/SCREEN SIZES START HERE 
-    the order goes from smallest to largest and cannot be changed */
+/*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+/************* MEDIA QUARIES/SCREEN SIZES START HERE *************/
+/* the order goes from smallest to largest and cannot be changed */
 
 /****************************************/
 /* all screens of 68px width and larger */
@@ -746,124 +599,23 @@ a:hover.back-to-top {
 
 @media (min-width: 68px) {
     
+/* about section bottom wave */
+.about-bottom-wave {
+    stroke-width: 1rem;
+    height: 4rem;
+}
+   
+/* portfolio grid */
 .portfolio {
     grid-template-columns: 1fr 1fr;
 }
-    
-/* project card image that IS zooming in to block zoom on mobile */
-.card-image:hover {
-    background-size: 100% auto;
-}
-    
-/* display image that IS NOT zooming in to block zoom on mobile */
-.card-image-display:hover {
-    background-size: 100% auto;
-}
-   
-/* left project card alignment settings - to fix extra space on the right on mobile */
-.card-left {
-    margin-right: 0rem;
-}
-
-/* right project card */
-.card, card-left {
-    width: 100%;
-}
- 
-/* left project card */
-.card-left {
-    width: 100%;
-}
-  
-/* project card image */
-.card-image, .card-image-display {
-    height: 18rem;
-}
-   
-/* title of project card */
-h2 {
-	font: 1.175rem/1.75rem "indivisible", sans-serif;
-    font-weight: 600;
-}
-  
-/* project card content */
-.card-body {
-    text-align: center;
-}
-
-/* project card title */
-.card-title {
-    margin-top: 1rem;
-    text-align: center;
-}
-     
-/* other headers */
-.header-general {
-    margin-bottom: -650px;
-}
-      
-/* other headers content */
-.header-general .header-content {
+        
+/* home page header content */
+.header-content {
     text-align: center;
     padding-top: 11rem;
 } 
-
-    
-    
-    
-    
-    
-/* graphic design section */
-.graphic-design {
-    background: #cbcbcb;
-    background-image: url('../images/projects_displays/gd_bw.png'); 
-    background-repeat: no-repeat;
-    background-position: 75% 50%;
-    height: 100%;
-    /*margin-top: -9rem; */
-    /*padding-top: 14rem; */
-    align-content: center; 
-}
-.graphic-design:hover {
-    background: #f8c582;
-    background-image: url('../images/projects_displays/gd_colored.png'); 
-    background-repeat: no-repeat;
-    background-position: 75% 50%; 
-}
-    
-    
-    
-    
-     
-/* graphic design section */
- /* .graphic-design {
-    transition: all 0.2s;
-    background: #f8d6aa;
-    background-image: url('../images/projects_displays/gd_mobile.png'); 
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-} */
- 
-/* VIEW PROJECTS button */
-.btn-line-view-projects {
-	display: inline-block;
-	padding: 1.5rem 1.125rem 1.5rem 1.125rem;
-    margin-top: 2rem;
-	border: 0.125rem solid black;
-	border-radius: 2rem;
-	background-color: black;
-	color: white;
-    font: 0.8rem/0rem "indivisible", sans-serif;
-    font-weight: 600;
-	transition: all 0.2s;
-}
-/* so it doesn't change on mobile */
-.btn-line-view-projects:hover {
-    text-decoration: none;
-	color: white;
-}
-    
+  
 /* styles for button shape */
 .btn-skills {
 	padding: 0.3rem 0rem 0.3rem 1rem;
@@ -878,13 +630,7 @@ h2 {
     margin-top: 8.4rem;
     text-align: center; /* otherwise goes left on bigger screens */
 }
- 
-/* about and footer section */
-.about, .footer {
-    padding-bottom: 4rem;
-	padding-top: 4rem;        
-}
-   
+
 /* header menu */
 .navbar-custom {
     background-color: rgba(255,255,255,0.3);
@@ -904,27 +650,22 @@ h2 {
     opacity: .8;
 } 
   
-/* homepage header only */ 
+/* home page header */ 
 .header {
     margin-bottom: -610px;
 }
      
-/* homepage header only content */ 
+/* home page header content */ 
 .header .header-content {
     padding-top: 11rem;
 }
     
-/* title page header */
+/* home page title */
 .name {
 	font: 4.5rem/3.2rem "indivisible";
     font-weight: 900;
 	letter-spacing: -7px;
 } 
-    
-/* to hide web dropdown in header on mobile */
-.dropdown {
-    display: none;
-}
 
 /* about top wave */
 .about-top-wave {
@@ -940,26 +681,8 @@ h2 {
 h1 {
     font: 1.5rem/2rem "indivisible", sans-serif;
     font-weight: 900;
-    padding-bottom: 7%;
-}
-  
-/* about section */
-.about {
-    text-align: center;
 }
 
-/* about bottom wave */
-.about-bottom-wave {
-    height: 3rem;
-    stroke-width: 1.5rem;
-    margin-top: -0.1rem; /* to hide white line between about section and wave */
-}
-
-/* footer section */
-.footer {
-	text-align: center;
-}
- 
 /* title of footer section */
 h1-footer {
     font: 1.5rem/2rem "indivisible", sans-serif;
@@ -971,6 +694,7 @@ h1-footer {
 .footer .icon-container {
 	text-align: center;
 }  
+    
 }
 
 /********************************************/
@@ -979,47 +703,16 @@ h1-footer {
     
 @media (min-width: 768px) {
 
-
-    
-/* left project card */
-.card-left {
-    transition: all 0.2s;
-    margin-right: 2rem;
-}
-     
-/* other headers */
-.header-general {
-    margin-bottom: -601px;
-}
-   
-/* other headers content */
-.header-general .header-content {
+/* home page header content */
+.header-content {
     padding-top: 10rem;
 } 
 
 /* page title */
-.header-general .text-container {
+.text-container {
     margin-top: -2rem;
 } 
-     
-/* VIEW PROJECTS button */
-.btn-line-view-projects {
-	padding: 1.8rem 2.125rem 1.8rem 2.125rem;
-    font: 1rem/0rem "indivisible", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-} 
-.btn-line-view-projects:hover {
-    text-decoration: none;
-	color: white;
-}
-    
-/* about and footer section */
-.about, .footer {
-    padding-bottom: 11rem; /* to compensate top wave space */
-	padding-top: 8rem;        
-}
-     
+        
 /* styles for button shapes */
 .btn-skills {
 	padding: 0.6rem 0rem 0.6rem 2rem;
@@ -1040,12 +733,12 @@ h1-footer {
     width: 410px; 
 } 
     
-/* homepage header only */ 
+/* home page header */ 
 .header {
     margin-bottom: -420px;
 }
      
-/* homepage header only content */
+/* home page header content */
 .header .header-content {
     padding-top: 12rem;
 }
@@ -1072,28 +765,6 @@ h1 {
     font-weight: 900;
 }
   
-/* about bottom wave */
-.about-bottom-wave {
-    height: 3rem;
-    stroke-width: 1.2rem;
-}
-    
-/* right project card */
-.card {
-    width: 47%;
-}
-  
-/* left project card */
-.card-left {
-    margin-bottom: 2rem;
-    width: 47%;
-}
-     
-/* project card image and display image that is not zooming in */
-.card-image, .card-image-display {
-    height: 17.8rem;
-}
-  
 /* title of footer section */
 h1-footer {
     font: 2.2rem/2.8rem "indivisible", sans-serif;
@@ -1107,66 +778,21 @@ h1-footer {
 
 @media (min-width: 992px) {
     
+/* about section bottom wave */
+.about-bottom-wave {
+    stroke-width: 1.2rem;
+    height: 6rem;
+}
+
+/* portfolio grid */
 .portfolio {
     grid-template-columns: 1fr 1fr 1fr;
 }
-
-/* project card image that IS zooming in */
-.card-image:hover {
-    background-size: 200% auto;
-}
-
-/* project card image that IS NOT zooming in */
-.card-image-display:hover {
-    background-size: 110% auto;
-    transition: all 0.2s ease;
-}
-
-/* title of project card */
-h2 {
-	font: 1.375rem/1.75rem "indivisible", sans-serif;
-    font-weight: 600;
-}
-    
-/* other headers */
-.header-general {
-    margin-bottom: -523px;
-}
-    
-/* page title */
-.header-general .text-container {
+      
+/* home page title */
+.text-container {
     margin-top: 0rem;
 } 
-    
-/* graphic design section */
-/*.graphic-design {
-    background: #cbcbcb;
-    background-image: url('../images/projects_displays/gd_bw.png'); 
-    background-repeat: no-repeat;
-    background-position: 75% 50%;
-    height: 33rem;
-    /*margin-top: -9rem; */
-    /*padding-top: 14rem; */
-    
-     /* text-align: left; 
-} */
-/* .graphic-design:hover {
-    background: #f8c582;
-    background-image: url('../images/projects_displays/gd_colored.png'); 
-    background-repeat: no-repeat;
-    background-position: 75% 50%; 
-} */
-    
-/* VIEW PROJECTS button */
-.btn-line-view-projects {
-	background-color: transparent;
-	color: black;
-}
-.btn-line-view-projects:hover {
-	background-color: black;
-	color: white;
-	text-decoration: none;
-}
     
 /* header menu */
 .navbar-custom {
@@ -1178,26 +804,16 @@ h2 {
     margin-top: -32rem;
 }
   
-/* homepage header only */
+/* home page header */
 .header {
     margin-bottom: -370px;
 }
 
-/* page title header */
+/* home page title header */
 .name {
 	font: 11.5rem/8.5rem "indivisible";
     font-weight: 900;
 } 
-    
-/* portfolio dropdown */
-.dropdown {
-    display: inline-block;
-}
-    
-/* portfolio dropdown on mobile */
-.nav-item-mobile {
-    display: none;
-}
   
 /* about top wave */
 .about-top-wave {
@@ -1216,46 +832,11 @@ h1 {
     text-align: center;  
 }
 
-/* about section */    
-.about {
-    text-align: center;
-}
-
-/* about bottom wave */
-.about-bottom-wave {
-    height: 4rem;
-    stroke-width: 1rem;
-}
- 
-/* right and left project card */
-.card, .card-left {
-    width: 48%;
-}
-
-/* project card image and display image that is not zooming in */
-.card-image, .card-image-display {
-    height: 25.4rem;
-}
-  
-/* footer section */
-.footer {
-	text-align: center;
-}
- 
 /* title of footer section */
 h1-footer {
     font-weight: 900;
 }
-   
-/* body text in footer section */
-.body-text-footer {
-    text-align: center;
-}
- 
-/* social block */
-.footer .icon-container {
-	text-align: center;
-}  
+
 }
 
 /*********************************************/
@@ -1263,6 +844,11 @@ h1-footer {
 /*********************************************/
 
 @media (min-width: 1200px) {
+  
+/* home page header */
+.header { 
+    margin-bottom: -345px;
+} 
   
 /* image of me */ 
 .img-wrapper {
@@ -1272,25 +858,15 @@ h1-footer {
     display: inline-block;
     opacity: .8;
 } 
-
-/* homepage header only */
-.header { 
-    margin-bottom: -345px;
-} 
-    
+  
 /* whole home page header */
 .header .header-content {
     text-align: left;
     padding-top: 10rem;
     padding-bottom: 12rem;
 } 
-    
-/* other headers */
-.header-general {
-    margin-bottom: -465px;
-}
       
-/* page title header */
+/* home page title */
 .name {
 	font: 14rem/10.5rem "indivisible";
     font-weight: 900;
@@ -1312,16 +888,6 @@ h1-footer {
     height: 3rem;
 }
  
-/* about section bottom wave */
-.about-bottom-wave {
-    height: 4rem;
-    stroke-width: 1.5rem;
-}
- 
-/* project card image and display image that is not zooming in */
-.card-image, .card-image-display {
-    height: 30.8rem;
-}
 }
   
 /*********************************************/
@@ -1330,24 +896,20 @@ h1-footer {
 
 @media (min-width: 1700px) { 
     
-/* other headers */
-.header-general {
-    margin-bottom: -350px;
-}
-    
 /* image of me */ 
 .img-wrapper {
     width: 580px; 
 } 
 
-/* homepage header only */
+/* home page header */
 .header {
     margin-bottom: -230px;
 }
        
-/* page title header */
+/* home page title */
 .name {
 	font: 19rem/14rem "indivisible";
     font-weight: 900;
 } 
+    
 }

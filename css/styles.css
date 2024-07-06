@@ -82,7 +82,7 @@ html {
     width: 100%;
 }
 
-/* header content */
+/* menu content */
 .navbar-custom .container {
 	max-width: 100%;
 }
@@ -251,7 +251,8 @@ a:hover.back-to-top {
 
 /* header background settings */
 .header {
-    height: 1000px;
+    place-content: flex-end;
+    text-align: center;
     background: radial-gradient(at top left, rgba(72,211,89) 0%, rgba(120,100,246,1) 75%);
     background-size: 160% 160%; 
     animation: gradient 4s ease infinite;
@@ -411,6 +412,7 @@ a:hover.back-to-top {
     z-index: 998;
     background-color: white;
     transition: all 0.2s; /* so that bg color change is smooth */
+    margin-top: -0.5rem;
 }
 
 /* about section top wave */
@@ -599,6 +601,11 @@ a:hover.back-to-top {
 
 @media (min-width: 68px) {
     
+/* header */ 
+.header {
+    height: 350px;
+}
+    
 /* about section bottom wave */
 .about-bottom-wave {
     stroke-width: 1rem;
@@ -609,12 +616,6 @@ a:hover.back-to-top {
 .portfolio {
     grid-template-columns: 1fr 1fr;
 }
-        
-/* home page header content */
-.header-content {
-    text-align: center;
-    padding-top: 11rem;
-} 
   
 /* styles for button shape */
 .btn-skills {
@@ -622,13 +623,6 @@ a:hover.back-to-top {
     margin-top: 0.6rem;
     margin-right: 0.2rem;
     font: 0.8rem/0rem "indivisible", sans-serif;
-}
-       
-/* name title */
-.header .text-container {
-    height: 21rem;
-    margin-top: 8.4rem;
-    text-align: center; /* otherwise goes left on bigger screens */
 }
 
 /* header menu */
@@ -640,26 +634,16 @@ a:hover.back-to-top {
 .image-container {
     text-align: center; /* otherwise goes left on bigger screens */
     position: absolute; /* otherwise goes down on bigger screens */
-    margin-top: -35rem;
+    margin-top: -20rem;
 } 
     
 /* image of me */ 
 .img-wrapper {
-    width: 230px; 
+    width: 240px; 
     display: inline-block;
     opacity: .8;
-} 
+}
   
-/* home page header */ 
-.header {
-    margin-bottom: -610px;
-}
-     
-/* home page header content */ 
-.header .header-content {
-    padding-top: 11rem;
-}
-    
 /* home page title */
 .name {
 	font: 4.5rem/3.2rem "indivisible";
@@ -702,17 +686,12 @@ h1-footer {
 /********************************************/
     
 @media (min-width: 768px) {
-
-/* home page header content */
-.header-content {
-    padding-top: 10rem;
-} 
-
-/* page title */
-.text-container {
-    margin-top: -2rem;
-} 
-        
+    
+/* header */ 
+.header {
+    height: 500px;
+}
+      
 /* styles for button shapes */
 .btn-skills {
 	padding: 0.6rem 0rem 0.6rem 2rem;
@@ -721,28 +700,17 @@ h1-footer {
     font: 1rem/0rem "indivisible", sans-serif;
 	transition: all 0.2s;
 }
- 
-/* header title and image block */
-.header .text-container {
-    margin-top: 14rem;
-    margin-bottom: -10rem;
-} 
+    
+/* image of me block */
+.image-container {
+    margin-top: -30rem;
+}
      
 /* image of me */ 
 .img-wrapper {
-    width: 410px; 
+    width: 340px; 
 } 
     
-/* home page header */ 
-.header {
-    margin-bottom: -420px;
-}
-     
-/* home page header content */
-.header .header-content {
-    padding-top: 12rem;
-}
-
 /* title page header */
 .name {
 	font: 9rem/6.5rem "indivisible";
@@ -778,6 +746,11 @@ h1-footer {
 
 @media (min-width: 992px) {
     
+/* header */ 
+.header {
+    height: 600px;
+}
+    
 /* about section bottom wave */
 .about-bottom-wave {
     stroke-width: 1.2rem;
@@ -788,25 +761,20 @@ h1-footer {
 .portfolio {
     grid-template-columns: 1fr 1fr 1fr;
 }
-      
-/* home page title */
-.text-container {
-    margin-top: 0rem;
-} 
     
 /* header menu */
 .navbar-custom {
     background-color: transparent;
 }
     
+/* image of me */ 
+.img-wrapper {
+    width: 480px; 
+}
+
 /* image of me block */
 .image-container {
-    margin-top: -32rem;
-}
-  
-/* home page header */
-.header {
-    margin-bottom: -370px;
+    margin-top: -35rem;
 }
 
 /* home page title header */
@@ -844,11 +812,11 @@ h1-footer {
 /*********************************************/
 
 @media (min-width: 1200px) {
-  
-/* home page header */
-.header { 
-    margin-bottom: -345px;
-} 
+    
+/* header */ 
+.header {
+    height: 700px;
+}
   
 /* image of me */ 
 .img-wrapper {
@@ -857,13 +825,6 @@ h1-footer {
     width: 480px; 
     display: inline-block;
     opacity: .8;
-} 
-  
-/* whole home page header */
-.header .header-content {
-    text-align: left;
-    padding-top: 10rem;
-    padding-bottom: 12rem;
 } 
       
 /* home page title */
@@ -875,7 +836,7 @@ h1-footer {
     
 /* image of me block */
 .image-container {
-    margin-top: -35rem;
+    margin-top: -45rem;
 } 
  
 /* about section top wave */
@@ -895,15 +856,20 @@ h1-footer {
 /*********************************************/
 
 @media (min-width: 1700px) { 
+
+/* header */ 
+.header {
+    height: 800px;
+}   
+
+/* image of me block */
+.image-container {
+    margin-top: -50rem;
+}
     
 /* image of me */ 
 .img-wrapper {
     width: 580px; 
-} 
-
-/* home page header */
-.header {
-    margin-bottom: -230px;
 }
        
 /* home page title */

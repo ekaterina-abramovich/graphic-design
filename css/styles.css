@@ -253,11 +253,6 @@ a:hover.back-to-top {
 /*          HOME PAGE         */
 /******************************/
 
-/* home page title */
-h1 {
-	color: black;
-}
-
 /* home page header */
 .header {
     background: radial-gradient(at top left, rgba(72,211,89) 0%, rgba(120,100,246,1) 75%);
@@ -503,10 +498,10 @@ h1 {
 }
 
 .section {
-  display: grid;
-  grid-gap: 0px;
-  grid-template-columns: 15% 70% 15%;
-  max-width: 100%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 15% 70% 15%;
+    max-width: 100%;
 }
 
 .center-block {
@@ -515,8 +510,21 @@ h1 {
     text-align: center;
 }
 
-.colored-block {
+.double-grid {
+    display: grid;
+    padding-bottom: 8%;
+    grid-gap: 5%;
+    grid-template-columns: auto auto;
+    max-width: 100%;
+}
+
+.colored-block-right {
     text-align: right;
+    align-content: center;
+}
+
+.colored-block-left {
+    text-align: left;
     align-content: center;
 }
 
@@ -540,6 +548,10 @@ vertical-text {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     font-weight: 900;
+}
+
+.svg-block {
+    padding-top: 8%;
 }
 
 /*
@@ -619,6 +631,8 @@ vertical-text {
 .portfolio {
     grid-template-columns: 1fr 1fr;
 }
+    
+
   
 /* styles for button shape */
 .btn-skills {
@@ -739,9 +753,12 @@ h1, h1-footer, h1-project {
     height: 6rem;
 }
 
-/* portfolio grid */
 .portfolio {
     grid-template-columns: 1fr 1fr 1fr;
+}
+    
+.double-grid {
+    grid-template-columns: auto auto;
 }
     
 /* header menu */
@@ -823,6 +840,10 @@ h1, h1-footer, h1-project {
 /*********************************************/
 
 @media (min-width: 1700px) { 
+    
+.section {
+    grid-template-columns: 1fr 1300px 1fr;
+}
     
 /* header */ 
 .header, .project-header {

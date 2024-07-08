@@ -553,13 +553,29 @@ vertical-text {
     transform: rotate(180deg);
     writing-mode: vertical-lr;
     text-transform: capitalize;
-    color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 255);
     -webkit-text-stroke-color: white;
 }
 
 /* block with svg/image */
 .svg-block {
     padding-top: 8%;
+}
+
+/* container for right vertical text */
+.vertical-text-container-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: -3.5%; /* to merge with side */
+}
+
+/* container for left vertical text */
+.vertical-text-container-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -3.5%; /* to merge with side */
 }
 
 /*
@@ -626,7 +642,7 @@ vertical-text {
     
 /* vertical text on colored block */
 vertical-text {
-    font:2rem/1.3rem "indivisible", sans-serif;
+    font:2rem/80% "indivisible", sans-serif;
     -webkit-text-stroke-width: 0.8px;
     font-weight: 900;
 }
@@ -757,7 +773,7 @@ h1, h1-footer, h1-project {
     
 /* vertical text on colored block */
 vertical-text {
-    font: 3.5rem/2.3rem "indivisible", sans-serif;
+    font: 3.5rem/80% "indivisible", sans-serif;
     font-weight: 900;
     -webkit-text-stroke-width: 1.2px;
 }
@@ -821,7 +837,7 @@ h1, h1-footer, h1-project {
     
 /* vertical text on colored block */
 vertical-text {
-    font: 5.5rem/3.6rem "indivisible", sans-serif;
+    font: 5.5rem/80% "indivisible", sans-serif;
     font-weight: 900;
     -webkit-text-stroke-width: 1.5px;
 }
@@ -864,6 +880,16 @@ vertical-text {
 /*********************************************/
 
 @media (min-width: 1700px) { 
+    
+/* container for right vertical text */
+.vertical-text-container-right {
+  margin-right: -0.5rem; /* to merge with side */
+}
+
+/* container for left vertical text */
+.vertical-text-container-left {
+  margin-left: -0.5rem; /* to merge with side */
+}
     
 /* project page section */
 .section {

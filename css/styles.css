@@ -149,7 +149,7 @@ html {
 .sub-block {
     align-content: center;
     text-align: center;
-    padding-bottom: 4%;
+    padding-bottom: 6%;
 }
 
 /* headers */
@@ -177,6 +177,7 @@ html {
 /* main body text */
 .body-text {
     color: black;
+    text-align: left;
 }
 
 /* body text in footer */
@@ -522,7 +523,16 @@ a:hover.back-to-top {
     display: grid;
     padding-bottom: 8%;
     grid-gap: 5%;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+}
+
+/* triple-grid in middle block */
+.triple-grid {
+    display: grid;
+    padding-bottom: 8%;
+    grid-gap: 5%;
+    grid-template-columns: 1fr 1fr 1fr;
     max-width: 100%;
 }
 

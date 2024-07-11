@@ -33,15 +33,32 @@ function preload_image(im_url) {
   img.src = im_url;
 }
 
-preload_image("images/projects_displays/ux_colored.png");
-preload_image("images/projects_displays/gd_colored.png");
-preload_image("images/projects_displays/games_colored.png");
-preload_image("images/projects_displays/3d_colored.png");
+preload_image("images/projects_displays/Creative Photography_bw.jpg");
+preload_image("images/projects_displays/Creative Photography_colored.jpg");
 
-preload_image("images/projects_displays/ux_bw.png");
-preload_image("images/projects_displays/gd_bw.png");
-preload_image("images/projects_displays/games_bw.png");
-preload_image("images/projects_displays/3d_bw.png");
+preload_image("images/projects_displays/Exhibit Booth_bw.jpg");
+preload_image("images/projects_displays/Exhibit Booth_colored.jpg");
+
+preload_image("images/projects_displays/IG Post Series_bw.jpg");
+preload_image("images/projects_displays/IG Post Series_colored.jpg");
+
+preload_image("images/projects_displays/Leaflet_bw.jpg");
+preload_image("images/projects_displays/Leaflet_colored.jpg");
+
+preload_image("images/projects_displays/Notebook_bw.jpg");
+preload_image("images/projects_displays/Notebook_colored.jpg");
+
+preload_image("images/projects_displays/Presentation_bw.jpg");
+preload_image("images/projects_displays/Presentation_colored.jpg");
+
+preload_image("images/projects_displays/Print Poster_bw.jpg");
+preload_image("images/projects_displays/Print Poster_colored.jpg");
+
+preload_image("images/projects_displays/Tote Bags_bw.jpg");
+preload_image("images/projects_displays/Tote Bags_colored.jpg");
+
+preload_image("images/projects_displays/UX_UI_bw.jpg");
+preload_image("images/projects_displays/UX_UI_colored.jpg");
 
 
 (function($) {

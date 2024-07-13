@@ -74,37 +74,28 @@ $('.overview-line').css('min-height', divHeight+'px');
 $(function() {
     
     const about = document.querySelector('.about')
-    const wavetop = document.querySelector('.cls-3')
     const wavebottom = document.querySelector('.cls-1')
 
     
    $(window).scroll(function () {
        
         about.style.backgroundColor = "white";
-        wavetop.style.fill = "white";
         wavebottom.style.fill = "white";
        
        
-      if ($(this).scrollTop() > 300) {
+      if ($(this).scrollTop() > 250) {
         about.style.backgroundColor = "#E5E1FF";
-        wavetop.style.fill = "#E5E1FF";
         wavebottom.style.fill = "#E5E1FF";
       }
        
-        if ($(this).scrollTop() > 1250) {
+        if ($(this).scrollTop() > 1000) {
         about.style.backgroundColor = "white";
-        wavetop.style.fill = "white";
         wavebottom.style.fill = "white";
       }
        
    });
 });
 
-    
-    
-
-
-    
     
 /* 3 preloading dots */
 	$(window).on('load', function() {

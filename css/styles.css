@@ -447,14 +447,14 @@ a:hover.back-to-top {
 }
 
 /* styles for shape content */
-.sketch, .after-effects, .figma, .canva, .illustrator, .wordpress, .photoshop, .modeling, .indesign {
+.sketch, .after-effects, .figma, .canva, .illustrator, .wordpress, .photoshop, .modeling, .indesign, .maya {
     background-color: transparent;
     padding: 1rem 2rem 1rem 2.4rem;
     border: 0rem;
     background-position: left;    
     background-repeat: no-repeat;
 }
-.sketch, .after-effects, .figma, .canva, .illustrator, .wordpress, .photoshop, .modeling, .indesign:disabled {
+.sketch, .after-effects, .figma, .canva, .illustrator, .wordpress, .photoshop, .modeling, .indesign, .maya:disabled {
     color: black;
 }
 
@@ -488,6 +488,10 @@ a:hover.back-to-top {
 
 .btn-skills .indesign {
     background-image: url("../images/skills_icons/indesign.svg");  
+}
+
+.btn-skills .maya {
+    background-image: url("../images/skills_icons/maya.svg");  
 }
 
 
@@ -811,7 +815,7 @@ vertical-text {
     
 /* image of me */ 
 .img-wrapper {
-    width: 480px; 
+    width: 390px; 
 }
 
 /* image of me block */
@@ -913,17 +917,17 @@ vertical-text {
 
 /* image of me block */
 .image-container {
-    margin-top: -50rem;
+    margin-top: -51rem;
 }
     
 /* image of me */ 
 .img-wrapper {
-    width: 580px; 
+    width: 550px; 
 }
        
 /* home page title */
 .name {
-	font: 19rem/14rem "indivisible";
+	font: 17rem/12rem "indivisible";
     font-weight: 900;
 } 
     

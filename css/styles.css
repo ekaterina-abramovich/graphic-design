@@ -152,9 +152,16 @@ html {
     padding-bottom: 6%;
 }
 
-/* headers */
-.header, .project-header {
+/* header */
+.header {
     place-content: flex-end;
+    text-align: center;
+   /* margin-bottom: -0.5rem; */
+}
+
+/* project page header */
+.project-header {
+    place-content: center;
     text-align: center;
    /* margin-bottom: -0.5rem; */
 }
@@ -290,19 +297,32 @@ a:hover.back-to-top {
 	}
 }
 
-/* page title */
+/* project page name */
 .name {
+    color: white;
+	font: 17rem/13rem "indivisible";
+    font-weight: 900;
+    font-style: normal;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+}
+.name:hover {
+    color: white;
+}
+
+/* title */
+.title {
     color: rgba(255, 255, 255, 0.3);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 	font: 17rem/13rem "indivisible";
     font-weight: 900;
     font-style: normal;
-	letter-spacing: -4px;
     position: relative;
     z-index: 1;
 }
-.name:hover {
+.title:hover {
     color: white;
 }
 
@@ -705,10 +725,9 @@ vertical-text {
 }
   
 /* home page title */
-.name {
+.name, .title {
 	font: 4.5rem/3.2rem "indivisible";
     font-weight: 900;
-	letter-spacing: -7px;
 } 
 
 /* footer black wave */	
@@ -761,7 +780,7 @@ h1, h1-footer, h1-project {
 } 
     
 /* title page header */
-.name {
+.name, .title  {
 	font: 9rem/6.5rem "indivisible";
     font-weight: 900;
 } 
@@ -824,7 +843,7 @@ vertical-text {
 }
 
 /* home page title header */
-.name {
+.name, .title {
 	font: 11.5rem/8.5rem "indivisible";
     font-weight: 900;
 } 
@@ -871,10 +890,9 @@ vertical-text {
 } 
       
 /* home page title */
-.name {
+.name, .title {
 	font: 14rem/10.5rem "indivisible";
     font-weight: 900;
-	letter-spacing: -4px;
 } 
     
 /* image of me block */
@@ -926,7 +944,7 @@ vertical-text {
 }
        
 /* home page title */
-.name {
+.name, .title {
 	font: 17rem/12.5rem "indivisible";
     font-weight: 900;
 } 

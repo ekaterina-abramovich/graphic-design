@@ -781,7 +781,7 @@ h1, h1-footer, h1-project {
     
 /* title page header */
 .name, .title  {
-	font: 9rem/6.5rem "indivisible";
+	font: 8.6rem/6.5rem "indivisible";
     font-weight: 900;
 } 
     
@@ -844,7 +844,7 @@ vertical-text {
 
 /* home page title header */
 .name, .title {
-	font: 11.5rem/8.5rem "indivisible";
+	font: 11.2rem/8.5rem "indivisible";
     font-weight: 900;
 } 
    
@@ -891,7 +891,7 @@ vertical-text {
       
 /* home page title */
 .name, .title {
-	font: 14rem/10.5rem "indivisible";
+	font: 13.6rem/10.3rem "indivisible";
     font-weight: 900;
 } 
     

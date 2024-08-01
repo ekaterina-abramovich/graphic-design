@@ -564,12 +564,14 @@ a:hover.back-to-top {
 .colored-block-right {
     text-align: right;
     align-content: center;
+    align-content: flex-start;
 }
 
 /* left colored block with text */
 .colored-block-left {
     text-align: left;
     align-content: center;
+    align-content: flex-start;
 }
 
 /* textless block */
@@ -611,6 +613,18 @@ vertical-text {
   align-items: center;
   margin-left: -3.5%; /* to merge with side */
 }
+
+/* horizontal image section */
+.horizontal-img {
+    transition: all 0.2s;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 22rem;
+}
+
 
 /*
 *
